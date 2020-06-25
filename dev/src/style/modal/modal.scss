@@ -1,0 +1,315 @@
+.modal {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.5);
+    z-index: 99999;
+
+    .close-modal {
+        position: absolute;
+        right: 2.29vw; //44px
+        top: 2.29vw; //44px
+        cursor: pointer;
+
+        @include tablet-size() {
+            right: 20px; //44px
+            top: 20px; //44px
+        }
+    }
+
+    .modal-form {
+        position: relative;
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+        width: 38.3vw; //738px
+        height: 34.22vw; //659
+        margin: auto;
+        margin: auto;
+        border-radius: 2.6vw; //50px
+        padding-top: 3.95vw; //76px
+        background: url('../img/modal-background1.png') center center no-repeat;
+        background-size: 100% 100%;
+
+        @include tablet-size() {
+            width: 738px;
+            max-width: 100%;
+            height: auto;
+            min-height: 500px;
+            border-radius: 50px; //50px
+            padding-top: 76px; //76px
+        }
+
+        .modal__img {
+            position: absolute;
+            width: 13.28vw; //255px;
+            height: 20.3125vw; //390px;
+            left: -5.5vw; //106px
+            top: 9.79vw; //188px
+            z-index: 5;
+
+            @include tablet-size() {
+                width: 255px;
+                height: 390px;
+                left: -106px;
+                top: 188px;
+            }
+        }
+
+        .modal-name {
+            padding: 0 5.48vw; //105px
+            margin-bottom: 1.3vw; //25px
+            font-size: $font-20vw;
+            font-family: MUSEOSANS_0;
+            font-weight: 500;
+            text-align: center;
+
+            span {
+                font-weight: 700;
+            }
+
+            @include tablet-size() {
+                padding: 0 15px;
+                margin-bottom: 25px;
+                font-size: $font-20;
+            }
+        }
+
+        .modal-desc {
+            padding: 0 5.48vw; //105px
+            margin-bottom: 2.08vw; //40px
+            font-size: $font-14vw;
+            font-family: MUSEOSANS_1;
+            font-weight: 300;
+            text-align: center;
+
+            @include tablet-size() {
+                padding: 0 30px; //105px
+                margin-bottom: 20px; //40px
+                font-size: $font-14;
+            }
+        }
+
+        .form {
+            // width: 26vw; //500px
+            padding: 0 6.5vw; //120px
+            position: relative;
+            z-index: 6;
+
+            @include tablet-size() {
+                padding: 0 20px; //120px
+            }
+
+            .item {
+                width: 100%;
+                border-radius: 40px;
+                background: #FFFFFF;
+                padding: 1.56vw 1.8vw; //30px 35px
+                margin-bottom: 0.9375vw; //18px
+
+                @include tablet-size() {
+                    padding: 15px 20px; //30px 35px
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .item__input {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    color: #CECECE;
+
+                    &:focus {
+                        border: none;
+                        outline: none;
+                        color: black;
+                    }
+                }
+            }
+
+            .form-select {
+                select {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    color: #ABABAB;
+                    
+
+                    &:focus {
+                        color: black;
+                    }
+                }
+            }
+
+            .form-name {
+
+            }
+
+            .form-phone {
+
+            }
+
+            .get-btn {
+                position: relative;
+                display: block;
+                outline: none;
+                width: 100%; //19.427vw; //373px
+                height: 4.166vw; // 80px //4.6875vw; //90px
+                background: #D7747A;
+                border: none;
+                border-radius: 2.2156vw; //42.54px
+                cursor: pointer;
+                // overflow: hidden;
+    
+                @include tablet-size() { 
+                    width: 373px;
+                    max-width: 100%;
+                    height: 90px;
+                    margin: 20px auto;
+                    border-radius: 42.54px;
+                }
+    
+                .btn-wrapper1 {
+                    position: absolute;
+                    width: 100%;
+                    height: calc(100% - 0.312vw);
+                    left: 0;
+                    border-radius: 2.2156vw; //42.54px
+                    bottom: 0.312vw; //6px
+                    background: #EF8B91;
+                    z-index: 5;
+    
+                    @include tablet-size() { 
+                        height: calc(100% - 6px);
+                        left: 0;
+                        border-radius: 42.54px;
+                        bottom: 6px;
+                    }
+                }
+    
+                .btn-wrapper2 {
+                    position: absolute;
+                    width: 100%;
+                    height: calc(100% - 0.612vw);
+                    left: 0;
+                    border-radius: 2.2156vw; //42.54px
+                    bottom: 0.612vw; //6px
+                    background: #F2999D;
+                    z-index: 7;
+    
+                    @include tablet-size() { 
+                        height: calc(100% - 11.75px);
+                        border-radius: 42.54px;
+                        bottom: 6px;
+                    }
+                }
+    
+                .btn-img {
+                    position: absolute;
+                    width: 10.36vw; //199px
+                    height: 2.708vw; //52px
+                    z-index: 10;
+                    right: -3.69vw; //71px
+                    top: 0.3125vw; //6px
+    
+                    @include tablet-size() { 
+                        width: auto; //273px
+                        height: auto; //70px
+                        right: -100px;
+                        top: 6px;
+                    }
+                }
+    
+                .btn-text {
+                    position: absolute;
+                    max-width: 9.3vw; //179px
+                    left: 2.343vw; //45px
+                    top: 1.45vw; //28px
+                    margin: 0;
+                    z-index: 10;
+                    font-size: $font-14vw;
+                    font-family: MUSEOSANS_1;
+                    font-weight: 700;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+    
+                    
+                    @include tablet-size() { 
+                        max-width: 179px;
+                        left: 45px;
+                        top: 29px;
+                        font-size: $font-14;
+                    }
+                }
+            }
+        }
+    }
+
+    .modal-success {
+        position: relative;
+        margin: auto;
+        width: 27.29vw; //524 px
+        height: 17.76vw; //341 px
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: url('../img/modal-background2.png') center center no-repeat;
+        background-size: 100% 100%;
+
+        @include tablet-size() { 
+            width: 524px;
+            max-width: 100%;
+            height: auto;
+            min-height: 500px;
+            border-radius: 42.54px;
+        }
+
+        .galochka {
+            width: 4.79vw; //92px
+            height: 4.79vw; //92px
+            margin-bottom: 1.3vw; //25px;
+
+            @include tablet-size() { 
+                width: 92px;
+                height: 92px;
+                margin-bottom: 25px;
+            }
+        }
+
+        .success-name {
+            font-size: $font-16vw;
+            font-family: MUSEOSANS_2;
+            font-weight: 700;
+            margin-bottom: 0.78125vw; //15px
+
+            @include tablet-size() { 
+                font-size: $font-16;
+                margin-bottom: 15px;
+            }
+        }
+
+        .success-desc {
+            font-size: $font-14vw;
+            font-family: MUSEOSANS_1;
+            font-weight: 500;
+
+            @include tablet-size() { 
+                font-size: $font-14;
+            }
+        }
+    }
+
+    .activeModal {
+        display: flex;
+    }
+}

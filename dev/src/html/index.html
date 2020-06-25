@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web test</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="favicon" href="img/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="content">
+        <div class="content-wrapper">
+            @@include('header/header.html')
+            @@include('menu/menu.html')
+            @@include('main/main.html')
+        </div>
+        <div class="content-bottom">
+            <img class="content-bottom__img" src="img/down.png" alt="down-arrow">
+        </div>
+        <!-- src="img/background-bottom.png" -->
+    </div>
+    @@include('modal/modal.html')
+    <script src="js/script.min.js"></script>
+</body>
+</html>

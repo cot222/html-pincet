@@ -1,0 +1,73 @@
+.menu {
+    width: 100%;
+    height: 3.28125vw; //63px
+    // margin-bottom: 6.04vw; //116px
+    position: relative;
+    background: white;
+    border-radius: 0.26vw; //5px
+
+    @include tablet-size() {
+        height: 50px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &:hover {
+            height: auto;
+        }
+    }
+
+    .back-block {
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        left: 2.5%;
+        top: 0.41vw; //8px
+        border-radius: 0.26vw; //5px
+        background: #FBFBFA;
+        z-index: -1;
+
+        @include tablet-size() {
+            top: 8px;
+            border-radius: 5px;
+        }
+    }
+
+    .menu-ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1.8vw; //35px
+        padding-right: 8.90625vw; //171px
+        list-style: none;
+        margin: 0;
+
+        @include tablet-size() {
+            padding: 0;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-self: center;
+        }
+
+        .menu-item {
+            padding-top: 1.197vw; //23px
+            padding-bottom: 1.35vw; //26px
+
+            @include tablet-size() {
+                padding-top: 23px;
+                padding-bottom: 26px;
+            }
+
+            .menu-item__a {
+                color: $color-black-light;
+                text-decoration: none;
+                font-family: MUSEOSANS_1;
+                font-size: $font-15vw;
+                font-weight: 300;
+
+                @include tablet-size() {
+                    font-size: $font-15;
+                }
+            }
+        }
+    }
+}

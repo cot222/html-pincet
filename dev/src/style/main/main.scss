@@ -1,0 +1,356 @@
+.main {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5.98vw; //115px
+    padding-top: 6.041vw; //116px
+
+    @include tablet-size() { 
+        padding-left: 0;
+        padding-top: 116px;
+    }
+
+    .main-left {
+        width: 41.40625vw; //795px
+
+        @include tablet-size() { 
+            width: 100%;
+        }
+
+        .left-shape {
+            position: absolute;
+            z-index: 1;
+            left: -3.125vw; //-1.77vw = 34px 50px
+            top: 2.6vw; //3.4375vw = 66px
+
+            @include tablet-size() { 
+                left: -60px; //-1.77vw = 34px 50px
+                top: 49.92px; //3.4375vw = 66px
+            }
+        }
+
+        .left-text {
+            position: relative;
+            z-index: 3;
+            font-size: $font-48vw;
+            font-family: MUSEOSANS_1;
+            font-weight: 300;
+            margin-bottom: 2.92vw; //3.3 = 64px 56
+            margin-top: 0; 
+            word-wrap: break-word;
+
+            @include tablet-size() { 
+                font-size: $font-48;
+                margin-bottom: 56px; //3.3 = 64px 56
+            }
+
+            .left-text__span {
+                font-weight: 700;
+            }
+        }
+
+        .works-menu {
+            // padding-left: 0.677vw; //13px
+            // list-style-image: url("../img/workCircle.png");
+            margin-bottom: 2.864vw; //55px
+
+            @include tablet-size() { 
+                margin-bottom: 55px;
+            }
+
+            .menu-item {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.729vw; //14px;
+                z-index: 10;
+                // font-size: $font-18vw;
+
+                @include tablet-size() { 
+                    margin-bottom: 14px;
+                }
+
+                .menu-item__img {
+                    width: 1.14vw; //22px
+                    height: 1.14vw; //22px
+
+                    @include tablet-size() { 
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+
+                .menu-item__text {
+                    font-size: $font-18vw;
+                    font-family: MUSEOSANS_1;
+                    font-weight: 300;
+                    margin: 0 0 0 0.416vw; //8px
+                    color: $color-black-light;
+
+                    @include tablet-size() { 
+                        margin: 0 0 0 8px;
+                        font-size: $font-18;
+                    }
+                }
+            }
+        }
+
+        .get-btn {
+            position: relative;
+            display: block;
+            width: 19.427vw; //373px
+            height: 4.6875vw; //90px
+            background: #D7747A;
+            border-radius: 2.2156vw; //42.54px
+            // overflow: hidden;
+
+            @include tablet-size() { 
+                width: 373px;
+                max-width: 100%;
+                height: 90px;
+                border-radius: 42.54px;
+            }
+
+            .btn-wrapper1 {
+                position: absolute;
+                width: 100%;
+                height: calc(100% - 0.312vw);
+                left: 0;
+                border-radius: 2.2156vw; //42.54px
+                bottom: 0.312vw; //6px
+                background: #EF8B91;
+                z-index: 5;
+
+                @include tablet-size() { 
+                    height: calc(100% - 6px);
+                    left: 0;
+                    border-radius: 42.54px;
+                    bottom: 6px;
+                }
+            }
+
+            .btn-wrapper2 {
+                position: absolute;
+                width: 100%;
+                height: calc(100% - 0.612vw);
+                left: 0;
+                border-radius: 2.2156vw; //42.54px
+                bottom: 0.612vw; //6px
+                background: #F2999D;
+                z-index: 7;
+
+                @include tablet-size() { 
+                    height: calc(100% - 11.75px);
+                    border-radius: 42.54px;
+                    bottom: 6px;
+                }
+            }
+
+            .btn-img {
+                position: absolute;
+                width: 14.21vw; //273px
+                height: 3.64vw; //70px
+                z-index: 10;
+                right: -6.927vw; //133px
+                top: 0.3125vw; //6px
+
+                @include tablet-size() { 
+                    width: auto; //273px
+                    height: auto; //70px
+                    right: 0;
+                    top: 6px;
+                }
+            }
+
+            .btn-text {
+                position: absolute;
+                max-width: 9.3vw; //179px
+                left: 2.343vw; //45px
+                top: 1.5vw; //29px
+                margin: 0;
+                z-index: 10;
+                font-size: $font-14vw;
+                font-family: MUSEOSANS_1;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                
+                @include tablet-size() { 
+                    max-width: 179px;
+                    left: 45px;
+                    top: 29px;
+                    font-size: $font-14;
+                }
+            }
+        }
+    }
+
+    .main-right {
+        width: 39.843vw; //765px
+
+        @include tablet-size() { 
+            width: 100%;
+            position: relative;
+        }
+
+        .right-girl {
+            // 870 767
+            position: absolute;
+            width: 45.3125vw; //870
+            height: 39.94vw; //767
+            top: 1.875vw; //36px;
+            right: -9.375vw; //180px
+
+            @include tablet-size() { 
+                top: 36px;
+                right: 0;
+                z-index: 1;
+            }
+        }
+
+        .right-clientmap {
+            //739 400
+            position: absolute;
+            width: 38.48vw; //739px
+            height: 20.83vw; //400px
+            top: 19.479vw; //374px
+            right: 9.21875vw; //177px
+
+            @include tablet-size() { 
+                top: 174px;
+                right: 0;
+                width: auto; //739px
+                max-width: 100%;
+                height: auto;
+                max-height: 400px;
+                z-index: 5;
+            }
+        }
+
+        .right-info {
+            position: absolute;
+            width: 9.27vw; //178px;
+            left: 45.156vw; //867px;
+            top: 30.05vw; //577px
+
+            @include tablet-size() { 
+                width: 178px;
+                left: 0;
+                top: 277px;
+            }
+
+            .right-info__img {
+                position: absolute;
+                right: 2.55vw; //49px
+                animation: pulse 2s infinite linear;
+                z-index: 6;
+                cursor: pointer;
+
+                @include tablet-size() { 
+                    right: 49px;
+                }
+
+                @keyframes pulse {
+                    from {
+                        transform: scale(1);
+                    }
+                    to {
+                        // transform: scale(.8);
+                        transform: scale(.5);
+                    }
+                }
+
+                &:hover .text-block__back {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                &:hover {
+                    animation-play-state: paused;
+    
+                    // & + .text-block__back {
+                    //     opacity: 1;
+                    //     visibility: visible;
+                    // }
+                    & + .text-wrapper {
+                        display: block;
+                    }
+    
+                    // & + .text-block {
+                    //     opacity: 1;
+                    //     visibility: visible;
+                    // }
+                }
+            }
+
+            .text-wrapper {
+                display: none;
+
+                .text-block {
+                    position: absolute;
+                    width: 9.21875vw; //177px;
+                    height: 10.937vw; //210px;
+                    bottom: -2.1vw;
+                    left: 0;
+                    border-top-left-radius: 2.6vw;
+                    border-top-right-radius: 2.6vw;
+                    border-bottom-left-radius: 0.3125vw;
+                    border-bottom-right-radius: 0.3125vw;
+                    padding: 1.77vw 1.35vw 1.66vw 1.51vw;//34px 26px 32px 29px;
+                    font-size: $font-14vw;
+                    font-family: MUSEOSANS_1;
+                    font-weight: 300;
+                    text-align: center;
+                    visibility: visible;
+                    opacity: 1;
+                    background: #FFFEFD;
+                    overflow: hidden;
+                    z-index: 5;
+    
+                    @include tablet-size() { 
+                        width: 177px;
+                        height: 210px;
+                        bottom: -40.32px;
+                        left: 0;
+                        border-top-left-radius: 50px;
+                        border-top-right-radius: 50px;
+                        border-bottom-left-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                        padding: 34px 26px 32px 29px;
+                        font-size: $font-14;
+                    }
+                }
+    
+                .text-block__back {
+                    position: absolute;
+                    width: 9.21875vw; //177px;
+                    height: 10.937vw; //210px;
+                    bottom: -1.528vw; //11px
+                    left: 0.625vw; //12px
+                    border-top-left-radius: 2.6vw;
+                    border-top-right-radius: 2.6vw;
+                    border-bottom-left-radius: 0.3125vw;
+                    border-bottom-right-radius: 0.3125vw;
+                    z-index: 4;
+                    visibility: visible;
+                    opacity: 1;
+                    background: rgba(255,255,255, 0.3);
+    
+                    @include tablet-size() { 
+                        width: 177px;
+                        height: 210px;
+                        bottom: -40.32px;
+                        left: 0;
+                        border-top-left-radius: 50px;
+                        border-top-right-radius: 50px;
+                        border-bottom-left-radius: 6px;
+                        border-bottom-right-radius: 6px;
+                        padding: 34px 26px 32px 29px;
+                        font-size: $font-14;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,352 @@
+.header {
+    width: 100%;
+    height: 9.0625vw; //174px;
+    padding-left: 1vw; //20px;
+    padding-right: 1vw; //20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet-size() {
+        height: auto;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+
+        .logo-img {
+            max-width: 14.79vw;
+
+            @include tablet-size() {
+                max-width: 100%;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .logo-desc {
+            margin-left: 2.34vw;
+
+            @include tablet-size() {
+                margin-left: 45px;
+            }
+
+            p {
+                font-family: MUSEOSANS_1;
+                font-weight: 300;
+                font-size: $font-14vw;
+                margin: 0;
+
+                @include tablet-size() {
+                    font-size: $font-14;
+                }
+            }
+        }
+    }
+
+    .header-address {
+        max-width: 16.25vw;
+        display: flex;
+
+        @include tablet-size() {
+            max-width: 100%;
+            margin: 20px 0;
+        }
+        
+        .address-image {
+            margin-right: 1.25vw; //24px
+            width: 4.16vw; //80px;
+            max-width: 4.16vw; //80px;
+            height: 4.16vw;
+            border-radius: 50%;
+            box-shadow: 0 0 0.52vw rgba(0,0,0, .5); //10px
+            background: url('../img/map.png') left center no-repeat;
+            background-size: cover;
+
+            @include tablet-size() {
+                width: 80px;
+                max-width: 80px;
+                height: 80px;
+                box-shadow: 0 0 10px rgba(0,0,0, .5);
+            }
+        }
+
+        .address-info {
+            max-width: 10.83vw;
+
+            @include tablet-size() {
+                max-width: 209px;
+                margin-bottom: 20px
+            }
+            
+            .address-info__place {
+                margin-bottom: 1vw;
+
+                @include tablet-size() {
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-family: MUSEOSANS_1;
+                    font-size: $font-16vw;
+                    margin: 0;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    @include tablet-size() {
+                        font-size: $font-16;
+                    }
+                }
+            }
+
+            .showMap {
+                position: relative;
+
+                &:hover .showMap-block{
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                .showMap__link {
+                    font-family: MUSEOSANS_1;
+                    font-size: $font-12vw;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-pink;
+                    padding-bottom: 0.208vw; //4px
+                    border-bottom: 0.052vw dashed $color-pink; //1px
+
+                    @include tablet-size() {
+                        font-size: $font-12;
+                        padding-bottom: 4px;
+                        border-bottom: 1px dashed $color-pink;
+                    }
+                }
+
+                .showMap-block {
+                    visibility: hidden;
+                    position: absolute;
+                    justify-content: center;
+                    align-items: center;
+                    width: 15.65vw;//300px;
+                    height: 15.65vw;
+                    top: 1vw; //20px
+                    left: 0;
+                    background: red;
+                    opacity: 0;
+                    font-size: $font-14vw;
+                    color: white;
+                    z-index: 10;
+
+                    @include tablet-size() {
+                        width: 100px;
+                        height: 100px;
+                        top: 20px;
+                        left: -50px;
+                        font-size: $font-14;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-contacts {
+        max-width: 13.59vw;
+        margin-left: 3.3vw; //64px;
+
+        @include tablet-size() {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .contacts-phone {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 0.46875vw; //9px;
+
+            @include tablet-size() {
+                margin-bottom: 9px;
+            }
+
+            .phone-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.8vw;
+                height: 1.8vw;
+                margin-right: 0.57vw; //11px
+                border-radius: 50%;
+                box-shadow: 0 0 0.52vw rgba(0,0,0, .4); //10px
+                background: white;
+
+                img {
+                    max-width: 0.83vw;
+                    max-height: 0.83vw;
+                }
+
+                @include tablet-size() {
+                    margin-bottom: 9px;
+                    width: 34.56px;
+                    height: 34.56px;
+                    margin-right: 11px; //11px
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px rgba(0,0,0, .4); //10px
+
+                    img {
+                        max-width: 15.936px;
+                        max-height: 15.936px;
+                    }
+                }
+            }
+
+            .phone-info {
+                .info-top {
+                    display: flex;
+                    align-items: center;
+
+                    .info-top__img {
+                        margin-right: 0.26vw; //5px;
+
+                        @include tablet-size() {
+                            margin-right: 5px;
+                        }
+                    }
+
+                    .info-top__h2 {
+                        font-size: $font-12vw;
+                        font-family: MUSEOSANS_2;
+                        font-weight: 500;
+                        margin: 0;
+
+                        @include tablet-size() {
+                            font-size: $font-12;
+                        }
+                    }
+                }
+
+                .info-bottom {
+                    .info-bottom__h2 {
+                        font-size: $font-24vw;
+                        font-family: MUSEOSANS_2;
+                        font-weight: 500;
+                        margin: 0;
+
+                        @include tablet-size() {
+                            font-size: $font-24;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contacts-worktime {
+            display: flex;
+            align-items: center;
+
+            .worktime-img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.8vw;
+                height: 1.8vw;
+                margin-right: 0.57vw; //11px
+                border-radius: 50%;
+                box-shadow: 0 0 0.52vw rgba(0,0,0, .4);
+                background: white;
+
+                img {
+                    max-width: 0.83vw;
+                    max-height: 0.83vw;
+                }
+
+                @include tablet-size() {
+                    margin-bottom: 9px;
+                    width: 34.56px;
+                    height: 34.56px;
+                    margin-right: 11px; //11px
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px rgba(0,0,0, .4); //10px
+
+                    img {
+                        max-width: 15.936px;
+                        max-height: 15.936px;
+                    }
+                }
+            }
+
+            .worktime-info {
+                .worktime-info__text {
+                    font-size: $font-16vw;
+                    font-family: MUSEOSANS_2;
+                    font-weight: 300;
+                    margin: 0;
+                    span {
+                        font-weight: bold;
+                    }
+
+                    @include tablet-size() {
+                        font-size: $font-16;
+                    }
+                }
+            }
+        }
+    }
+
+    .header-online {
+        position: relative;
+        max-width: 11.97vw;
+        margin-left: 3.33vw; //64px;
+        z-index: 2;
+
+        @include tablet-size() {
+            max-width: 100%;
+        }
+
+        .header-online__link {
+            display: flex;
+            align-items: center;
+            padding: 1.04vw; //20px;
+            border-radius: 1.5625vw; //30px;
+            background: white;
+            box-shadow: 0 0.15625vw 0 #EBEAEA; //10px
+            color: black;
+            font-size: $font-12vw;
+            font-family: MUSEOSANS_2;
+            font-weight: 500;
+            text-decoration: none;
+
+            img {
+                width: 1.1vw;
+                height: 1.1vw;
+                margin-right: 0.57vw; //11px
+            }
+
+            @include tablet-size() {
+                padding: 20px; //20px;
+                border-radius: 30px; //30px;
+                box-shadow: 0 10px 0 #EBEAEA; //10px
+                font-size: $font-12;
+
+                img {
+                    width: 21.12px;
+                    height: 21.12px;
+                    margin-right: 11px;
+                }
+            }
+        }
+    }
+}

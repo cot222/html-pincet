@@ -1,0 +1,11 @@
+@import "media.scss";
+@import "basic.scss";
+@import "fonts.scss";
+@import "var.scss";
+
+
+//подключение обьектных стилей
+@import "header/header.scss";
+@import "menu/menu.scss";
+@import "main/main.scss";
+@import "modal/modal.scss";
